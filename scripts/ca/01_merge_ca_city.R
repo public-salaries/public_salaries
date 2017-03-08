@@ -19,4 +19,4 @@ tables      <- lapply(files, function(x) read.csv(unzip(x), header = TRUE))
 city_year   <- do.call(rbind , tables)
 
 # Convert names to lower case 
-names(city_year) <- 
+names(city_year) <- tolower(names(city_year))

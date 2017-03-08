@@ -6,10 +6,10 @@ To build a comprehensive (geographic coverage, over time) database of salaries o
 
 ### Data
 
-Data is organized by state, year, and level (area) of government. For getting a sense of what kind of data is available across states, check this [excel file]().
+Data is organized by state, year, and level (area) of government. For getting a sense of what kind of data is available across states, check this [excel file](sources_for_salaries.xlsx).
 
 * California
-    - [City Level Data](data/ca/readme.md)
+    - [City Employee Data](data/ca/readme.md)
         + [2009 (zip)](data/ca/2009/city.zip)
         + [2010 (zip)](data/ca/2010/city.zip)
         + [2011 (zip)](data/ca/2011/city.zip)
