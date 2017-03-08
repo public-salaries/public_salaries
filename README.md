@@ -19,11 +19,12 @@ Data is organized by state, year, and level (area) of government. For getting a 
         + [2015 (zip)](data/ca/2015/city.zip)
 
 * Census Income Data
+    - [Household Income Data by City](data/census/hh_income_city.csv)
 
 ### Analyses
 
-* [Merge California City Level Data](scripts/)
-* [Merge Agg. California City Level Data with Census Income data](scripts/)
+* [Merge California City Level Data](scripts/01_ca_city_merge.R)
+* [Merge Agg. California City Level Data with Census Income data](scripts/02_agg_ca_city_census.R)
 
 ### Authors 
 
