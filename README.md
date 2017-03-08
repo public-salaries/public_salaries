@@ -9,14 +9,14 @@ To build a comprehensive (geographic coverage, over time) database of salaries o
 Data is organized by state, year, and level (area) of government. For getting a sense of what kind of data is available across states, check this [excel file]().
 
 * California
-    - [City Level Data](data/ca/city.md)
-        + [2009](data/ca/2009/city/)
-        + [2010](data/ca/2010/city/)
-        + [2011](data/ca/2011/city/)
-        + [2012](data/ca/2012/city/)
-        + [2013](data/ca/2013/city/)
-        + [2014](data/ca/2014/city/)
-        + [2015](data/ca/2015/city/)
+    - [City Level Data](data/ca/readme.md)
+        + [2009 (zip)](data/ca/2009/city.zip)
+        + [2010 (zip)](data/ca/2010/city.zip)
+        + [2011 (zip)](data/ca/2011/city.zip)
+        + [2012 (zip)](data/ca/2012/city.zip)
+        + [2013 (zip)](data/ca/2013/city.zip)
+        + [2014 (zip)](data/ca/2014/city.zip)
+        + [2015 (zip)](data/ca/2015/city.zip)
 
 * Census Income Data
 
@@ -24,7 +24,6 @@ Data is organized by state, year, and level (area) of government. For getting a 
 
 * [Merge California City Level Data](scripts/)
 * [Merge Agg. California City Level Data with Census Income data](scripts/)
-* []
 
 ### Authors 
 
