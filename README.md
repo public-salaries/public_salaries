@@ -4,32 +4,40 @@
 
 To build a comprehensive (geographic coverage, over time) database of salaries of public employees, along with relevant contextual information, for instance, average income of people living in the same area, people working in similar professions, or jobs etc.  
 
+### Why?
+
+A couple working as custodians for Richmond City, California in 2015 would have had a higher family income (before any benefits) than the median family income of the wealthiest county in California. This kind of a fact takes additional gravity given the dire financial straits Richmond, the second poorest among the hundred plus cities in the Bay Area, found itself in 2015---Moody downgraded Richmond's bond rating, costing the city millions of dollars.  
+
+About 75%--80% of Richmond's budget goes toward personnel costs. This figure itself is not unusual across cities. And highlights the importance of investigating public employee salaries if we want to understand problems with fiscal governance at the local level.  Aside from the first order concerns, the fact that public employee unions fund council members' campaign to the tune of millions suggests other reasons to scrutinize public employee salaries. 
+
+In all, our aim is to investigate the extent to which compensation for different public employees is fair and rational.
+
 ### Data
 
 Data is organized by state, year, and level (area) of government. For getting a sense of what kind of data is available across states, check this [excel file](sources_for_salaries.xlsx).
 
-* California
-    - [City Employee Data](data/ca/readme.md)
-        + [2009 (zip)](data/ca/2009/city.zip)
-        + [2010 (zip)](data/ca/2010/city.zip)
-        + [2011 (zip)](data/ca/2011/city.zip)
-        + [2012 (zip)](data/ca/2012/city.zip)
-        + [2013 (zip)](data/ca/2013/city.zip)
-        + [2014 (zip)](data/ca/2014/city.zip)
-        + [2015 (zip)](data/ca/2015/city.zip)
+* [Alaska](data/ak) 
+* [Arizona](data/az)
+* [California](data/ca)
+* [Illinois](data/il)
+* [Iowa](data/ia)
 
 * Census Income Data
     - [Household Income Data by City](data/census/hh_income_city.csv)
 
-### Analyses
+### Analyses For California
 
 * [Merge California City Level Data](scripts/01_ca_city_merge.R)
 * [Merge Agg. California City Level Data with Census Income data](scripts/02_agg_ca_city_census.R)
 
 ### Authors 
 
-Vinay Pimple, Gaurav Sood, and Daniel Trielli
+Vinay Pimple and Gaurav Sood
+
+#### Contribute to the project
+
+If you see an inconsistency in the data, or have a suggestion, or some data that you would like to contribute to the project, please create a pull request or open an issue. 
 
 ### License
 
-Analyses Released under [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/). 
+Analyses Released under [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/). Data is released under the MIT License.
