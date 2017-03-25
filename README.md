@@ -6,7 +6,7 @@ To build a comprehensive (geographic coverage, over time) database of salaries o
 
 ### Why?
 
-A couple working as custodians for Richmond City, California in 2015 would have had a higher family income (before any benefits) than the median family income of the wealthiest county in California. This kind of a fact takes additional gravity given the dire financial straits Richmond, the second poorest among the hundred plus cities in the Bay Area, found itself in 2015---Moody downgraded Richmond's bond rating, costing the city millions of dollars.  
+A couple working as custodians for the city of Richmond, California in 2015 would have had a higher family income (before any benefits) than the median family income of the wealthiest county in California. This kind of a fact takes additional gravity given the dire financial straits Richmond, the second poorest among the hundred plus cities in the Bay Area, found itself in 2015---Moody downgraded Richmond's bond rating, costing the city millions of dollars.  
 
 About 75%--80% of Richmond's budget goes toward personnel costs. This figure itself is not unusual across cities. And highlights the importance of investigating public employee salaries if we want to understand problems with fiscal governance at the local level.  Aside from the first order concerns, the fact that public employee unions fund council members' campaign to the tune of millions suggests other reasons to scrutinize public employee salaries. 
 
