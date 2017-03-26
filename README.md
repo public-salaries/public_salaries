@@ -22,6 +22,8 @@ Data is organized by state, year, and level (area) of government. For getting a 
 * [California](data/ca/)
 * [Illinois](data/il/)
 * [Iowa](data/ia/)
+* [Kentucky](data/ky/)
+* [Maine](data/me/)
 
 * Census Income Data
     - [Household Income Data by City](data/census/hh_income_city.csv)
