@@ -16,11 +16,12 @@ In all, our aim is to investigate the extent to which compensation for different
 
 Data is organized by state, year, and level (area) of government. For getting a sense of what kind of data is available across states, check this [excel file](sources_for_salaries.xlsx).
 
-* [Alaska](data/ak) 
-* [Arizona](data/az)
-* [California](data/ca)
-* [Illinois](data/il)
-* [Iowa](data/ia)
+* [Alaska](data/ak/) 
+* [Arizona](data/az/)
+* [Arkansas](data/ar/) 
+* [California](data/ca/)
+* [Illinois](data/il/)
+* [Iowa](data/ia/)
 
 * Census Income Data
     - [Household Income Data by City](data/census/hh_income_city.csv)
