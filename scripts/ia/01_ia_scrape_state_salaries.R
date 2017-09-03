@@ -10,6 +10,7 @@ setwd(githubdir)
 setwd("public_salaries/")
 
 # Load libraries
+library(plyr)
 library(dplyr)
 library(httr)
 library(rvest)
