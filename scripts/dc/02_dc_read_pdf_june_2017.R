@@ -86,11 +86,7 @@ obs_list <- lapply(observations, function(obs) {
     unlist(., FALSE, FALSE) %>% 
     .[!. == "$"] %>% 
     gsub(",", "", .)
-  #### TROUBLESHOOTING
-  #cat("***\n")
-  #cat(paste0(obs, collapse = "\n"))
-  #cat("\n***\n")
-  ####
+
   # Look for known agency names in the first element of obs.
   no_match <- TRUE
   obs_one <- tolower(obs[1])
