@@ -118,10 +118,10 @@ obs_list <- lapply(observations, function(j) {
   }
   
   # Extract the commpensation.
-  comp <- sapply(obs, function(x) suppressWarnings(as.double(x)), 
-                 USE.NAMES = FALSE)
-  if (any(!is.na(comp))) {
-    comp <- max(comp, na.rm = TRUE)
+  comp_id <- sapply(obs, function(x) suppressWarnings(as.double(x)), 
+                    USE.NAMES = FALSE)
+  if (any(!is.na(comp_id))) {
+    comp <- max(comp_id, na.rm = TRUE)
   } else {
     comp <- NA
   }
@@ -129,7 +129,8 @@ obs_list <- lapply(observations, function(j) {
   # Eliminate elements of obs that were successfully cast as double and that 
   # were identified as the hire date. If obs is empty or all NA's, return all 
   # NA's.
-  obs <- obs[is.na(comp) & is.na(date_id)]
+  
+  obs <- obs[is.na(comp_id) & is.na(date_id)]
   if (length(obs) == 0 || all(is.na(obs))) {
     return(
       data.frame(
@@ -146,7 +147,7 @@ obs_list <- lapply(observations, function(j) {
   }
   
   # If length obs == 5, check to see if values "pos_title" and "grade" are 
-  # concatted. If they are, extract "pos_title", then return values.
+  # concatted. If they are, extract "pos_title". Then return relevant values.
   if (length(obs) == 5) {
     len_obs_five <- nchar(obs[5])
     if (grepl("\\s\\d\\d", substr(obs[5], (len_obs_five - 2), len_obs_five))) {
