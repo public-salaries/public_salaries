@@ -186,11 +186,11 @@ obs_list <- lapply(observations, function(obs) {
   }
 
   # Extract hire date.
-  for (i in obs) {
-    hire_date <- as.Date(i, format = "%m/%d/%Y")
-    if (!is.na(hire_date)) {
-      break
-    }
+  hire_date <- as.Date(obs, format = "%m/%d/%Y")
+  if (any(!is.na(hire_date))) {
+    hire_date <- hire_date[!is.na(hire_date)]
+  } else {
+    hire_date <- NA
   }
   
   return(
@@ -210,5 +210,9 @@ obs_list <- lapply(observations, function(obs) {
 # rbind all observations together into a single data frame.
 obs_df <- tibble::as_data_frame(do.call(rbind, obs_list))
 
+# Write agency_dd to file.
+saveRDS(agency_dd, "./scripts/dc/dc_agency_names_data_dictionary.RDS")
+
 # Write obs_df to file.
-write.csv(obs_df, "./data/dc/public_body_employee_information_06302017.csv", row.names = FALSE)
+write.csv(obs_df, "./data/dc/public_body_employee_information_06302017.csv", 
+          row.names = FALSE)
