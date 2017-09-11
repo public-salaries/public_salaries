@@ -28,6 +28,7 @@ Data is organized by state, year, and level (area) of government. For getting a 
 * [Massachusetts](data/ma/)
 * [North Carolina](data/nc/)
 * [New Jersey](data/nj/)
+* [Rhode Island](data/ri/)
 * [South Carolina](data/sc/)
 
 * Census Income Data
