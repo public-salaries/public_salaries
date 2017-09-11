@@ -29,7 +29,6 @@ Data is organized by state, year, and level (area) of government. For getting a 
 * [North Carolina](data/nc/)
 * [New Jersey](data/nj/)
 * [South Carolina](data/sc/)
-* [Washington DC](data/dc/)
 
 * Census Income Data
     - [Household Income Data by City](data/census/hh_income_city.csv)
