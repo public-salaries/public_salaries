@@ -25,6 +25,7 @@ Data is organized by state, year, and level (area) of government. For getting a 
 * [Iowa](data/ia/)
 * [Kentucky](data/ky/)
 * [Maine](data/me/)
+* [Massachusetts](data/ma/)
 * [North Carolina](data/nc/)
 * [New Jersey](data/nj/)
 * [South Carolina](data/sc/)
