@@ -68,7 +68,15 @@ agency_dd <- c(readRDS("./scripts/dc/dc_agency_names_data_dictionary.RDS"),
                "Advisory Neighborhood Commissions Office of", 
                "Planning and Economic Development Office of the", 
                "Council of the District of Columbia", 
-               "board of ethics and government Accountability") %>% 
+               "board of ethics and government Accountability", 
+               "Motion Picture and Television Development Office o", 
+               "Office of the Deputy Mayor for Greater Economic Op", 
+               "department of health care finance", 
+               "disability services department on", 
+               "health and human services ofc of the deputy may", 
+               "contracting and procurement office of", 
+               "board of ethics and government Accountability", 
+               "department of small and local business developme") %>% 
   tolower %>% 
   .[order(nchar(.), decreasing = TRUE)]
 
