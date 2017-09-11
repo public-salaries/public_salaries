@@ -40,7 +40,7 @@ Data is organized by state, year, and level (area) of government. For getting a 
 
 ### Authors 
 
-Vinay Pimple and Gaurav Sood
+Chris Muir, Vinay Pimple, and Gaurav Sood
 
 #### Contribute to the project
 
