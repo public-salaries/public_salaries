@@ -20,6 +20,7 @@ Data is organized by state, year, and level (area) of government. For getting a 
 * [Arizona](data/az/)
 * [Arkansas](data/ar/) 
 * [California](data/ca/)
+* [Delaware](data/de/)
 * [District of Columbia](data/dc/)
 * [Illinois](data/il/)
 * [Iowa](data/ia/)
