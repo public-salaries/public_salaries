@@ -39,6 +39,7 @@ Data is organized by state, year, and level (area) of government. For getting a 
 * [Oregon](data/or/)
 * [Rhode Island](data/ri/)
 * [South Carolina](data/sc/)
+* [West Virginia](data/wv/)
 
 * Census Income Data
     - [Household Income Data by City](data/census/hh_income_city.csv)
