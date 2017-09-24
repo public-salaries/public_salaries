@@ -27,6 +27,7 @@ Data is organized by state, year, and level (area) of government. For getting a 
 * [Illinois](data/il/)
 * [Iowa](data/ia/)
 * [Louisiana](data/la/)
+* [Kansas](data/ks/)
 * [Kentucky](data/ky/)
 * [Maine](data/me/)
 * [Massachusetts](data/ma/)
@@ -39,6 +40,7 @@ Data is organized by state, year, and level (area) of government. For getting a 
 * [Oregon](data/or/)
 * [Rhode Island](data/ri/)
 * [South Carolina](data/sc/)
+* [Texas](data/tx/)
 * [West Virginia](data/wv/)
 
 * Census Income Data
