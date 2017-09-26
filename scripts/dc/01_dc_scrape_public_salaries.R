@@ -6,7 +6,7 @@
 # download all 23 PDF docs, and save them to dir public_salaries/data/dc
 
 # Load libraries.
-library(dplyr)
+library(magrittr)
 library(rvest)
 
 # Get links for all 23 PDF docs on the main page.
