@@ -23,6 +23,7 @@ Data is organized by state, year, and level (area) of government. For getting a 
 * [Delaware](data/de/)
 * [District of Columbia](data/dc/)
 * [Florida](data/fl/)
+* [Georgia](data/ga/)
 * [Idaho](data/id/)
 * [Illinois](data/il/)
 * [Iowa](data/ia/)
