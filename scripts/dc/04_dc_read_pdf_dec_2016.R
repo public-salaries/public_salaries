@@ -315,8 +315,8 @@ obs_df <- obs_list %>%
   .[apply(., 1, function(x) !all(is.na(x))), ]
 
 # Add month and year of the target pdf file.
-obs_df$month <- 3
-obs_df$year <- 2017
+obs_df$month <- 12
+obs_df$year <- 2016
 
 # Write obs_df to file.
 write.csv(obs_df, "./data/dc/public_body_employee_information_123116.csv", 
