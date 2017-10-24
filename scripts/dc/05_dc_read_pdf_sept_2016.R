@@ -79,19 +79,6 @@ pn_dd <- readRDS("./scripts/dc/dc_proper_names_data_dictionary.RDS")
 # as a single-row data frame. Each of these df's will be compiled into a list, 
 # which will then be rbind together using do.call().
 obs_list <- lapply(observations, function(j) {
-  if (grepl("SCARBOROUGH-DRUMMONDDEBRA", j)) {
-    return(
-      data.frame(
-        agency = "fake_data", 
-        last_name = "fake_data", 
-        first_name = "fake_data", 
-        type_appt = "fake_data", 
-        compensation = "fake_data", 
-        hire_date = "fake_data", 
-        stringsAsFactors = FALSE
-      )
-    )
-  }
   # Split obs up into a vector of elements (as strings).
   obs <- j %>% 
     gsub(",|\\$", "", .) %>% 
@@ -119,7 +106,6 @@ obs_list <- lapply(observations, function(j) {
   # Extract the hire date.
   hire_date <- as.Date(obs, format = "%m/%d/%Y")
   if (any(!is.na(hire_date))) {
-    date_id <- obs[which(!is.na(hire_date))]
     hire_date <- hire_date[!is.na(hire_date)]
   } else {
     date_id <- grepl("\\d{1,2}/\\d{1,2}/\\d\\d\\d\\d", obs)
@@ -127,12 +113,13 @@ obs_list <- lapply(observations, function(j) {
       date_start <- regexpr("\\d{1,2}/\\d{1,2}/\\d\\d\\d\\d", obs[date_id])
       date_end <- date_start + (attributes(date_start)$match.length - 1)
       hire_date <- obs[date_id] %>% 
-        substr(., date_start, date_end) %>% 
-        as.Date(format = "%m/%d/%Y")
-      date_id <- obs[date_id]
+        substr(., date_start, date_end)
+      obs[which(date_id)] <- obs[which(date_id)] %>% 
+        gsub(hire_date, "", .) %>% 
+        trimws
+      hire_date <- as.Date(hire_date, format = "%m/%d/%Y")
     } else {
       hire_date <- NA
-      date_id <- NA
     }
   }
   
@@ -255,55 +242,12 @@ obs_list <- lapply(observations, function(j) {
   }
   obs <- obs[obs != ""]
   
-  # If compensation wasn't extracted in the steps above, try to extract it 
-  # again.
-  if (is.na(comp)) {
-    comp_id <- vapply(obs, function(x) {
-      out <- suppressWarnings(as.double(x))
-      if (is.na(out)) {
-        return(NA_character_)
-      } else {
-        return(x)
-      }
-    }, character(1), USE.NAMES = FALSE)
-    if (any(!is.na(comp_id))) {
-      comp <- max(as.double(comp_id[!is.na(comp_id)]), na.rm = TRUE)
-    } else {
-      comp <- NA
-    }
-  }
   
-  # If date wasn't extracted in the steps above, try to extract it again.
-  if (is.na(hire_date)) {
-    hire_date <- as.Date(obs, format = "%m/%d/%Y")
-    if (any(!is.na(hire_date))) {
-      date_id <- obs[which(!is.na(hire_date))]
-      hire_date <- hire_date[!is.na(hire_date)]
-    } else {
-      date_id <- grepl("\\d{1,2}/\\d{1,2}/\\d\\d\\d\\d", obs)
-      if (any(date_id)) {
-        date_start <- regexpr("\\d{1,2}/\\d{1,2}/\\d\\d\\d\\d", obs[date_id])
-        date_end <- date_start + (attributes(date_start)$match.length - 1)
-        hire_date <- obs[date_id] %>% 
-          substr(., date_start, date_end) %>% 
-          as.Date(format = "%m/%d/%Y")
-        date_id <- obs[date_id]
-      } else {
-        hire_date <- NA
-        date_id <- NA
-      }
-    }
-  }
   
-  # Eliminate the extracted date_id string from obs.
-  if (any(!is.na(date_id))) {
-    obs <- obs %>% 
-      gsub(date_id[!is.na(date_id)], "", ., ignore.case = TRUE) %>% 
-      trimws %>% 
-      .[. != ""] %>% 
-      strsplit(., "\\s{2,}") %>% 
-      unlist(., FALSE, FALSE)
-  }
+  
+  
+  
+
   
   # Eliminate the extracted comp_id string from obs.
   if (any(!is.na(comp_id))) {
@@ -366,7 +310,7 @@ obs_df$month <- 09
 obs_df$year <- 2016
 
 # Write obs_df to file.
-write.csv(obs_df, "./data/dc/public_body_employee_information_123116.csv", 
+write.csv(obs_df, "./data/dc/public_body_employee_information_sept_16_0.csv", 
           row.names = FALSE)
 
 # Write agency_dd to file, this will be used to help extract agency strings in 
