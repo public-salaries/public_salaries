@@ -133,8 +133,13 @@ for (year in years) {
     if (any(names(cache_table) == x)) {
       obs <- cache_table[[x]]
     } else {
-      obs <- x %>% 
-        xml2::read_html() %>% 
+      # Pull the url content. If there's a connection error, return the error 
+      # message, do NOT record the result to obj cache_table. 
+      obs <- tryCatch(xml2::read_html(x), error = function(e) e)
+      if (!is.character(obs)) {
+        return(obs$message)
+      }
+      obs <- obs %>% 
         rvest::html_nodes("div.copy") %>% 
         rvest::html_text()
       # system sleep to keep from melting a server.
@@ -151,17 +156,22 @@ for (year in years) {
       lapply(., trimws)
     col_names <- vapply(obs, "[", character(1), 1)
     vals <- vapply(obs, "[", character(1), 2)
-    # Assert that lengths are the same.
+    # Assert that lengths are the same. If they are not, print a warning to 
+    # console indicating the url, and return an error message.
     if (length(col_names) != length(vals)) {
-      stop(
+      warning(
         paste("length of col_names does not match length of vals. link:", x), 
         call. = FALSE)
+      return("error: length of col_names does not match length of vals")
     }
     # return data frame.
     return(
       vect_2_df(vals, col_names)
     )
   })
+  
+  # Eliminate elements of obs_list that are not data frames.
+  obs_list <- obs_list[vapply(obs_list, is.data.frame, logical(1))]
   
   # rbind all observations together into a single data frame, and eliminate 
   # any observations that are completely filled with NA's.
