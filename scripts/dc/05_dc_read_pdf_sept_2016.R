@@ -8,7 +8,7 @@ library(magrittr)
 
 # This script will read in file "public_salaries/data/dc/public_body_of_employee_information_sept_16_0.pdf", 
 # apply transformations to extract relevant data. Output is a tidy data frame 
-# that containsvariables: "agency", "last_name", "first_name", "type_appt",
+# that contains variables: "agency", "last_name", "first_name", "type_appt",
 # "position_title", "compensation", and "hire_date"
 
 
@@ -241,13 +241,6 @@ obs_list <- lapply(observations, function(j) {
       trimws
   }
   obs <- obs[obs != ""]
-  
-  
-  
-  
-  
-  
-
   
   # Eliminate the extracted comp_id string from obs.
   if (any(!is.na(comp_id))) {

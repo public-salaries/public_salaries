@@ -8,7 +8,7 @@ library(magrittr)
 
 # This script will read in file "public_salaries/data/dc/public_body_employee_information_123116.pdf", 
 # apply transformations to extract relevant data. Output is a tidy data frame 
-# that containsvariables: "agency", "last_name", "first_name", "type_appt",
+# that contains variables: "agency", "last_name", "first_name", "type_appt",
 # "position_title", "compensation", and "hire_date"
 
 

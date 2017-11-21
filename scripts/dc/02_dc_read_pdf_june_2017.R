@@ -9,7 +9,7 @@ library(qdapDictionaries)
 
 # This script will read in file "public_salaries/data/dc/public_body_employee_information_06302017.pdf", 
 # apply transformations to extract relevant data. Output is a tidy data frame 
-# that containsvariables: "agency", "last_name", "first_name", "type_appt",
+# that contains variables: "agency", "last_name", "first_name", "type_appt",
 # "position_title", "compensation", and "hire_date"
 
 # Eastablish dictionary of common terms that will be used to help ID proper 
