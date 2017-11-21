@@ -128,7 +128,7 @@ for (year in years) {
   }
   
   # Loop over all teacher links.
-  obs_list <- lapply(teacher_links[[year]][1:10000], function(x) {
+  obs_list <- lapply(teacher_links[[year]], function(x) {
     # Scrape data from url, or fetch the scraped data from cache_table.
     if (any(names(cache_table) == x)) {
       obs <- cache_table[[x]]
