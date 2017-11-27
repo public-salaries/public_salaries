@@ -136,7 +136,7 @@ for (year in years) {
       # Pull the url content. If there's a connection error, return the error 
       # message, do NOT record the result to obj cache_table. 
       obs <- tryCatch(xml2::read_html(x), error = function(e) e)
-      if (!is.character(obs)) {
+      if (methods::is(obs, "error")) {
         return(obs$message)
       }
       obs <- obs %>% 
