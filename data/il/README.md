@@ -6,3 +6,6 @@
 
 * Data from Chicago Employees from [https://data.cityofchicago.org/Administration-Finance/Current-Employee-Names-Salaries-and-Position-Title/xzkq-xp2w](https://data.cityofchicago.org/Administration-Finance/Current-Employee-Names-Salaries-and-Position-Title/xzkq-xp2w)
     - Last Updated June 2015
+
+* Data on IL public school employees, from [http://www.familytaxpayers.org/ftf/ftf_salaries.php](http://www.familytaxpayers.org/ftf/ftf_salaries.php)
+    - Includes salary data for 1999 - 2012
