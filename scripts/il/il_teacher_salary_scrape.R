@@ -120,7 +120,7 @@ vect_2_df <- function(values, col_names) {
 
 for (year in years) {
   year <- as.character(year)
-  cache_table <- list()
+  cache_table <- new.env(hash = TRUE, parent = emptyenv())
   
   # Create directory for the current year (if it doesn't already exist).
   if (!dir.exists(file.path(cwd, "data", "il", year))) {
@@ -128,7 +128,13 @@ for (year in years) {
   }
   
   # Loop over all teacher links.
-  obs_list <- lapply(teacher_links[[year]], function(x) {
+  obs_list <- lapply(seq_len(length(teacher_links[[year]])), function(x) {
+    # If x is divisible by 10000, print x (this is just to make tracking 
+    # progress easier).
+    if (x %% 10000 == 0) {
+      print(x)
+    }
+    x <- teacher_links[[year]][x]
     # Scrape data from url, or fetch the scraped data from cache_table.
     if (any(names(cache_table) == x)) {
       obs <- cache_table[[x]]
@@ -145,7 +151,7 @@ for (year in years) {
       # system sleep to keep from melting a server.
       Sys.sleep(2)
       # Write scraped data to the cache_table.
-      cache_table[[x]] <<- obs
+      cache_table[[x]] <- obs
     }
     # Unpack col names and values.
     obs <- obs %>% 
@@ -173,11 +179,15 @@ for (year in years) {
   # Eliminate elements of obs_list that are not data frames.
   obs_list <- obs_list[vapply(obs_list, is.data.frame, logical(1))]
   
-  # rbind all observations together into a single data frame, and eliminate 
-  # any observations that are completely filled with NA's.
+  # rbind all observations together into a single data frame.
   obs_df <- obs_list %>% 
     do.call(rbind, .) %>% 
-    tibble::as_data_frame() %>% 
+    tibble::as_data_frame()
+  
+  # Convert all empty strings to NA, then eliminate any observations that are 
+  # completely filled with NA's.
+  obs_df <- obs_df %>% 
+    `is.na<-`(. == "") %>% 
     .[apply(., 1, function(x) !all(is.na(x))), ]
   
   # Write obs_df to file.
