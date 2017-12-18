@@ -118,9 +118,19 @@ vect_2_df <- function(values, col_names) {
 ## iterate over 2mil+ urls, pull a small bit of data from each one, 
 ## and includes a 2 second Sys.sleep between each url.
 
+# The loop caches scraped data, in order to ensure each unique url is only 
+# pinged once. To facilitate caching, we're using an evrionment variable hash 
+# table to house url-return_data key-value pairs. It also uses a char vector 
+# of keys, which is used to look up values in the hash table. Adding and 
+# retrieving values from an env hash table is much faster than using a list 
+# method, and using a char vector to look for the existence of values is 
+# faster than checking the keys of an env hash table.
+
 for (year in years) {
   year <- as.character(year)
   cache_table <- new.env(hash = TRUE, parent = emptyenv())
+  num_links <- length(teacher_links[[year]])
+  keys <- vector(mode = "character", length = num_links)
   
   # Create directory for the current year (if it doesn't already exist).
   if (!dir.exists(file.path(cwd, "data", "il", year))) {
@@ -128,15 +138,15 @@ for (year in years) {
   }
   
   # Loop over all teacher links.
-  obs_list <- lapply(seq_len(length(teacher_links[[year]])), function(x) {
+  obs_list <- lapply(seq_len(num_links), function(idx) {
     # If x is divisible by 10000, print x (this is just to make tracking 
     # progress easier).
-    if (x %% 10000 == 0) {
-      print(x)
+    if (idx %% 10000 == 0) {
+      print(idx)
     }
-    x <- teacher_links[[year]][x]
+    x <- teacher_links[[year]][idx]
     # Scrape data from url, or fetch the scraped data from cache_table.
-    if (any(names(cache_table) == x)) {
+    if (any(keys == x)) {
       obs <- cache_table[[x]]
     } else {
       # Pull the url content. If there's a connection error, return the error 
@@ -150,8 +160,9 @@ for (year in years) {
         rvest::html_text()
       # system sleep to keep from melting a server.
       Sys.sleep(2)
-      # Write scraped data to the cache_table.
+      # Write scraped data to the cache_table, and to obj keys.
       cache_table[[x]] <- obs
+      keys[idx] <<- x
     }
     # Unpack col names and values.
     obs <- obs %>% 
