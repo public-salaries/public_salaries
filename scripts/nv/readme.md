@@ -22,4 +22,4 @@ python cityScraper.py
 ```
 
 ### Data
-The final dataset with the 7 CSVs 7zipped is posted [here](../data/nv/).
+The final dataset with the 7 CSVs 7zipped is posted [here](../../data/nv/).
