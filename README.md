@@ -25,6 +25,7 @@ Data is organized by state, year, and level (area) of government. For getting a 
 * [District of Columbia](data/dc/)
 * [Florida](data/fl/)
 * [Georgia](data/ga/)
+* [Hawaii](data/hi/)
 * [Idaho](data/id/)
 * [Illinois](data/il/)
 * [Iowa](data/ia/)
@@ -36,6 +37,7 @@ Data is organized by state, year, and level (area) of government. For getting a 
 * [Minnesota](data/mn/)
 * [Montana](data/mt/)
 * [New Hampshire](data/nh/)
+* [Nevada](data/nv/)
 * [North Carolina](data/nc/)
 * [New Jersey](data/nj/)
 * [New Mexico](data/nm/)
@@ -45,6 +47,7 @@ Data is organized by state, year, and level (area) of government. For getting a 
 * [Texas](data/tx/)
 * [West Virginia](data/wv/)
 
+* [Data on Highered institutions from Collegiate Times](data/collegiate_times/)
 * Census Income Data
     - [Household Income Data by City](data/census/hh_income_city.csv)
 
@@ -55,7 +58,7 @@ Data is organized by state, year, and level (area) of government. For getting a 
 
 ### Authors 
 
-Chris Muir, Vinay Pimple, and Gaurav Sood
+Chris Muir and Gaurav Sood
 
 #### Contribute to the project
 
