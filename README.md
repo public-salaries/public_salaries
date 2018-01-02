@@ -2,7 +2,7 @@
 
 ### Aim 
 
-To build a comprehensive (geographic coverage, over time) database of salaries of public employees, along with relevant contextual information, for instance, average income of people living in the same area, people working in similar professions, or jobs etc.  
+To build a comprehensive (geographic coverage, over time) database of salaries of public employees, along with relevant contextual information, for instance, average income of people living in the same area, people working in similar professions or jobs, etc.  
 
 ### Why?
 
@@ -12,56 +12,73 @@ About 75%--80% of Richmond's budget goes toward personnel costs. This figure its
 
 In all, our aim is to investigate the extent to which compensation for different public employees is fair and rational.
 
-### Data
+### Data 
 
-Data is organized by state, year, and level (area) of government. For getting a sense of what kind of data is available across states, check this [excel file](sources_for_salaries.xlsx).
+|            State            |   State    |    City    | County     |    k12     |          Higher Ed.          |
+| :-------------------------: | :--------: | :--------: | ---------- | :--------: | :--------------------------: |
+|       [Alabama](al/)        |    2010    |            |            |            |                              |
+|        [Alaska](ak/)        |            |            |            |            |          2009--2016          |
+|       [Arizona](az/)        |            |            |            |            | UA 2011--2014<br /> ASU 2008 |
+|       [Arkansas](ar/)       |    2017    |            |            |            |                              |
+|      [California](ca/)      | 2009--2016 | 2009--2016 | 2009--2016 | 2009--2016 |          2009--2016          |
+|       [Colorado](co/)       |            |            |            |            |                              |
+|     [Connecticut](ct/)      |            |            |            |            |                              |
+|       [Delaware](de/)       |            |            |            |            |                              |
+| [District of Columbia](dc/) |            |            |            |            |                              |
+|       [Florida](fl/)        |            |            |            |            |                              |
+|       [Georgia](ga/)        |            |            |            |            |                              |
+|        [Hawaii](hi/)        |            |            |            |            |                              |
+|        [Idaho](id/)         |            |            |            |            |                              |
+|       [Illinois](il/)       |            |            |            |            |                              |
+|       [Indiana](in/)        |            |            |            |            |                              |
+|         [Iowa](ia/)         |            |            |            |            |                              |
+|        [Kansas](ks/)        |            |            |            |            |                              |
+|       [Kentucky](ky/)       |            |            |            |            |                              |
+|        [Maine](me/)         |            |            |            |            |                              |
+|      [Louisiana](la/)       |            |            |            |            |                              |
+|        [Maine](me/)         |            |            |            |            |                              |
+|       [Maryland](md/)       |            |            |            |            |                              |
+|    [Massachusetts](ma/)     |            |            |            |            |                              |
+|       [Michigan](mi/)       |            |            |            |            |                              |
+|      [Minnesota](mn/)       |            |            |            |            |                              |
+|     [Mississippi](ms/)      |            |            |            |            |                              |
+|       [Missouri](mo/)       |            |            |            |            |                              |
+|       [Montana](mt/)        |            |            |            |            |                              |
+|       [Nebraska](nb/)       |            |            |            |            |                              |
+|        [Nevada](nv/)        |            |            |            |            |                              |
+|    [New Hampshire](nh/)     |            |            |            |            |                              |
+|      [New Jersey](nj/)      |            |            |            |            |                              |
+|      [New Mexico](nm/)      |            |            |            |            |                              |
+|       [New York](ny/)       |            |            |            |            |                              |
+|    [North Carolina](nc/)    |            |            |            |            |                              |
+|     [North Dakota](nd/)     |            |            |            |            |                              |
+|         [Ohio](oh/)         |            |            |            |            |                              |
+|       [Oklahoma](ok/)       |            |            |            |            |                              |
+|        [Oregon](or/)        |            |            |            |            |                              |
+|     [Pennsylvania](pa/)     |            |            |            |            |                              |
+|     [Rhode Island](ri/)     |            |            |            |            |                              |
+|    [South Carolina](sc/)    |            |            |            |            |                              |
+|     [South Dakota](sd/)     |            |            |            |            |                              |
+|      [Tennessee](tn/)       |            |            |            |            |                              |
+|        [Texas](tx/)         |            |            |            |            |                              |
+|         [Utah](ut/)         |            |            |            |            |                              |
+|       [Vermont](vt/)        |            |            |            |            |                              |
+|       [Virginia](va/)       |            |            |            |            |                              |
+|      [Washington](wa/)      |            |            |            |            |                              |
+|    [West Virginia](wv/)     |            |            |            |            |                              |
+|      [Wisconsin](wi/)       |            |            |            |            |                              |
+|       [Wyoming](wy/)        |            |            |            |            |                              |
 
-* [Alabama](al/)
-* [Alaska](ak/) 
-* [Arizona](az/)
-* [Arkansas](ar/) 
-* [California](ca/)
-* [Connecticut](ct/)
-* [Delaware](de/)
-* [District of Columbia](dc/)
-* [Florida](fl/)
-* [Georgia](ga/)
-* [Hawaii](hi/)
-* [Idaho](id/)
-* [Illinois](il/)
-* [Iowa](ia/)
-* [Louisiana](la/)
-* [Kansas](ks/)
-* [Kentucky](ky/)
-* [Maine](me/)
-* [Massachusetts](ma/)
-* [Minnesota](mn/)
-* [Montana](mt/)
-* [New Hampshire](nh/)
-* [Nevada](nv/)
-* [North Carolina](nc/)
-* [New Jersey](nj/)
-* [New Mexico](nm/)
-* [Oregon](or/)
-* [Rhode Island](ri/)
-* [South Carolina](sc/)
-* [Texas](tx/)
-* [Tennessee](tn/)
-* [Utah](ut/)
-* [West Virginia](wv/)
+Besides this: 
 
-* [Data on Highered institutions from Collegiate Times](collegiate_times/)
-* Census Income Data
-    - [Household Income Data by City](census/hh_income_city.csv)
+- [Data on Highered institutions from Collegiate Times](collegiate_times/)
+- Census Income Data
+  - [Household Income Data by City](census/hh_income_city.csv)
 
-### Analyses For California
 
-* [Merge California City Level Data](scripts/01_ca_city_merge.R)
-* [Merge Agg. California City Level Data with Census Income data](scripts/02_agg_ca_city_census.R)
+### Authors
 
-### Authors 
-
-Chris Muir and Gaurav Sood
+Gaurav Sood and Chris Muir
 
 #### Contribute to the project
 
