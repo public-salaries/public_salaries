@@ -2,7 +2,7 @@
 
 ### Sources
 
-* Data for State Payroll from 2010--2017 from [http://transparency.ct.gov/html/downloads.asp](http://transparency.ct.gov/html/downloads.asp)
+* Data for State (and University of Connecticut) Payroll from 2010--2017 from [http://transparency.ct.gov/html/downloads.asp](http://transparency.ct.gov/html/downloads.asp)
 
 ### Metadata on State Payroll Data
 
