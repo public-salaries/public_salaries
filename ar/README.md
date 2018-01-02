@@ -1,4 +1,4 @@
-## Arizona Public Employee Salaries
+## Arkansas Public Employee Salaries
 
 ### Sources
 
