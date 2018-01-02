@@ -2,6 +2,8 @@
 library(pdftools)
 library(magrittr)
 
+cwd <- getwd()
+
 ## Read in and merge PA pdf data.
 ## Source of the pdf docs is http://pennwatch.pa.gov/employees/Pages/Employee-Salaries.aspx
 
@@ -15,7 +17,7 @@ curr_month <- 11
 curr_year <- 2017
 
 # Define data directory file path, and get list of all PDF files.
-data_dir <- file.path(getwd(), "data", "pa", "2017")
+data_dir <- file.path(cwd, "pa", "2017")
 all_files <- list.files(path = data_dir, pattern = "*.pdf", full.names = TRUE)
 
 # Iterate over the list of PDF files. For each one, read it in, extract the 
@@ -157,9 +159,7 @@ all_dfs2 <- lapply(all_files, function(curr_file) {
 })
 
 
-# rbind all observations together into a single data frame, and eliminate any 
-# observations that are completely filled with NA's.
-df <- do.call(rbind, all_dfs)
+# rbind all observations together into a single data frame.
 df <- all_dfs %>% 
   do.call(rbind, .) %>% 
   `colnames<-`(c("last_name", "first_name", "position", "annual_salary", 

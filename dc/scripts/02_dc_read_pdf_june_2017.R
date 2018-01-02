@@ -4,6 +4,8 @@ library(tibble)
 library(magrittr)
 library(qdapDictionaries)
 
+cwd <- getwd()
+
 ## Read in Washington DC pdf data.
 ## Source of the pdf docs is https://dchr.dc.gov/public-employee-salary-information
 
@@ -44,7 +46,9 @@ known_cols <- c(
 )
 
 # Read in the pdf document.
-file_name <- "./data/dc/public_body_employee_information_06302017.pdf"
+file_name <- file.path(
+  cwd, "dc", "public_body_employee_information_06302017.pdf"
+)
 txt <- pdftools::pdf_text(file_name)
 
 # Find the column headers of the data within the pdf doc.
@@ -301,17 +305,28 @@ obs_df$month <- 6
 obs_df$year <- 2017
 
 # Write obs_df to file.
-write.csv(obs_df, "./data/dc/public_body_employee_information_06302017.csv", 
-          row.names = FALSE)
+write.csv(
+  obs_df, 
+  file.path(cwd, "dc", "public_body_employee_information_06302017.csv"), 
+  row.names = FALSE
+)
 
 # Write agency_dd to file, this will be used to help extract agency strings in 
 # other DC scripts.
-saveRDS(agency_dd, "./scripts/dc/dc_agency_names_data_dictionary.RDS")
+saveRDS(
+  agency_dd, 
+  file.path(cwd, "dc", "scripts", "dc_agency_names_data_dictionary.RDS")
+)
 
 # Write type_appt_dd to file, this will be used to help extract type_appt 
 # strings in other DC scripts.
-saveRDS(type_appt_dd, "./scripts/dc/dc_type_appt_data_dictionary.RDS")
+saveRDS(
+  type_appt_dd, 
+  file.path(cwd, "dc", "scripts", "dc_type_appt_data_dictionary.RDS")
+)
 
 # Write obj "pn_dd" to file, this will be used to help differentiat between 
 # proper names and dictionary words.
-saveRDS(pn_dd, "./scripts/dc/dc_proper_names_data_dictionary.RDS")
+saveRDS(
+  pn_dd, file.path(cwd, "dc", "scripts", "dc_proper_names_data_dictionary.RDS")
+)

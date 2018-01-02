@@ -96,7 +96,7 @@ teacher_links <- lapply(teacher_links, unique)
 # Save teacher_links as an rds object.
 saveRDS(
   teacher_links, 
-  file.path(cwd, "data", "il", "teacher_links_all_years.rds")
+  file.path(cwd, "il", "teacher_links_all_years.rds")
 )
 
 # Helper function to create a single obs df.
@@ -133,8 +133,8 @@ for (year in years) {
   keys <- vector(mode = "character", length = num_links)
   
   # Create directory for the current year (if it doesn't already exist).
-  if (!dir.exists(file.path(cwd, "data", "il", year))) {
-    dir.create(file.path(cwd, "data", "il", year))
+  if (!dir.exists(file.path(cwd, "il", year))) {
+    dir.create(file.path(cwd, "il", year))
   }
   
   # Loop over all teacher links.
@@ -205,7 +205,7 @@ for (year in years) {
   write.csv(
     obs_df, 
     file.path(
-      cwd, "data", "il", year, paste0("il_teacher_salaries_", year, ".csv")
+      cwd, "il", year, paste0("il_teacher_salaries_", year, ".csv")
     ), 
     row.names = FALSE
   )

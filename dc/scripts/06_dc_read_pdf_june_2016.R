@@ -3,6 +3,8 @@ library(pdftools)
 library(tibble)
 library(magrittr)
 
+cwd <- getwd()
+
 ## Read in Washington DC pdf data.
 ## Source of the pdf docs is https://dchr.dc.gov/public-employee-salary-information
 
@@ -12,7 +14,9 @@ library(magrittr)
 # "position_title", and "compensation".
 
 # Read in the pdf document.
-file_name <- "./data/dc/public_body_employee_information_jun16_0.pdf"
+file_name <- file.path(
+  cwd, "dc", "public_body_employee_information_jun16_0.pdf"
+)
 txt <- pdftools::pdf_text(file_name)
 
 # Establish vector of column headers
@@ -36,11 +40,14 @@ observations <- observations[2:length(observations)]
 
 # Load type_appt_dd data dictionary, this will be used to help identify 
 # type appt strings.
-type_appt_dd <- readRDS("./scripts/dc/dc_type_appt_data_dictionary.RDS")
+type_appt_dd <- readRDS(
+  file.path(cwd, "dc", "scripts", "dc_type_appt_data_dictionary.RDS")
+)
 
 # Load agency_dd data dictionary, this will be used to help identify agency 
 # strings.
-agency_dd <- c(readRDS("./scripts/dc/dc_agency_names_data_dictionary.RDS"), 
+agency_dd <- c(readRDS(file.path(cwd, "dc", "scripts", 
+                                 "dc_agency_names_data_dictionary.RDS")), 
                "Public Employee Relations Brd") %>% 
   tolower %>% 
   .[order(nchar(.), decreasing = TRUE)]
@@ -48,7 +55,9 @@ agency_dd <- c(readRDS("./scripts/dc/dc_agency_names_data_dictionary.RDS"),
 
 # Load pn_dd data dictionary, this will be used to help differentiate between 
 # proper names and dictionary words.
-pn_dd <- readRDS("./scripts/dc/dc_proper_names_data_dictionary.RDS")
+pn_dd <- readRDS(
+  file.path(cwd, "dc", "scripts", "dc_proper_names_data_dictionary.RDS")
+)
 
 # For each observation within the pdf, extract relevant data and save output 
 # as a single-row data frame. Each of these df's will be compiled into a list, 
@@ -269,13 +278,22 @@ obs_df$month <- 06
 obs_df$year <- 2016
 
 # Write obs_df to file.
-write.csv(obs_df, "./data/dc/public_body_employee_information_jun16_0.csv", 
-          row.names = FALSE)
+write.csv(
+  obs_df, 
+  file.path(cwd, "dc", "public_body_employee_information_jun16_0.csv"), 
+  row.names = FALSE
+)
 
 # Write agency_dd to file, this will be used to help extract agency strings in 
 # other DC scripts.
-saveRDS(agency_dd, "./scripts/dc/dc_agency_names_data_dictionary.RDS")
+saveRDS(
+  agency_dd, 
+  file.path(cwd, "dc", "scripts", "dc_agency_names_data_dictionary.RDS")
+)
 
 # Write type_appt_dd to file, this will be used to help extract type_appt 
 # strings in other DC scripts.
-saveRDS(type_appt_dd, "./scripts/dc/dc_type_appt_data_dictionary.RDS")
+saveRDS(
+  type_appt_dd, 
+  file.path(cwd, "dc", "scripts", "dc_type_appt_data_dictionary.RDS")
+)

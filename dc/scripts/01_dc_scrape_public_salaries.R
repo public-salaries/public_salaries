@@ -9,6 +9,8 @@
 library(magrittr)
 library(rvest)
 
+cwd <- getwd()
+
 # Get links for all 23 PDF docs on the main page.
 pdfs <- "https://dchr.dc.gov/public-employee-salary-information" %>%
   xml2::read_html() %>% 
@@ -26,5 +28,5 @@ for (i in pdfs) {
     gsub("%20", "_", .)
   
   # Download PDF file.
-  download.file(i, paste0("./data/dc/", file_name), mode = "wb")
+  download.file(i, file.path(cwd, "dc", file_name), mode = "wb")
 }
