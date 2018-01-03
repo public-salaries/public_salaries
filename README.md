@@ -24,12 +24,12 @@ In all, our aim is to investigate the extent to which compensation for different
 |       [Colorado](co/)       |            |            |            |            |                              |
 |     [Connecticut](ct/)      |            |            |            |            |                              |
 |       [Delaware](de/)       |            |            |            |            |                              |
-| [District of Columbia](dc/) |            |            |            |            |                              |
+| [District of Columbia](dc/) | 2016--2017 |            |            |            |                              |
 |       [Florida](fl/)        |            |            |            |            |                              |
 |       [Georgia](ga/)        |            |            |            |            |                              |
 |        [Hawaii](hi/)        |            |            |            |            |                              |
 |        [Idaho](id/)         |            |            |            |            |                              |
-|       [Illinois](il/)       |            |            |            |            |                              |
+|       [Illinois](il/)       |            |            |            | 2009--2012 |                              |
 |       [Indiana](in/)        |            |            |            |            |                              |
 |         [Iowa](ia/)         |            |            |            |            |                              |
 |        [Kansas](ks/)        |            |            |            |            |                              |
@@ -55,7 +55,7 @@ In all, our aim is to investigate the extent to which compensation for different
 |         [Ohio](oh/)         |            |            |            |            |                              |
 |       [Oklahoma](ok/)       |            |            |            |            |                              |
 |        [Oregon](or/)        |            |            |            |            |                              |
-|     [Pennsylvania](pa/)     |            |            |            |            |                              |
+|     [Pennsylvania](pa/)     |    2017    |            |            |            |                              |
 |     [Rhode Island](ri/)     |            |            |            |            |                              |
 |    [South Carolina](sc/)    |            |            |            |            |                              |
 |     [South Dakota](sd/)     |            |            |            |            |                              |
