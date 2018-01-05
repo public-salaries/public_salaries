@@ -14,60 +14,60 @@ In all, our aim is to investigate the extent to which compensation for different
 
 ### Data 
 
-|            State            |   State    |    City    | County     |    k12     |          Higher Ed.          |
-| :-------------------------: | :--------: | :--------: | ---------- | :--------: | :--------------------------: |
-|       [Alabama](al/)        |    2010    |            |            |            |                              |
-|        [Alaska](ak/)        |            |            |            |            |          2009--2016          |
-|       [Arizona](az/)        |            |            |            |            | UA 2011--2014<br /> ASU 2008 |
-|       [Arkansas](ar/)       |    2017    |            |            |            |                              |
-|      [California](ca/)      | 2009--2016 | 2009--2016 | 2009--2016 | 2009--2016 |          2009--2016          |
-|       [Colorado](co/)       |            |            |            |            |                              |
-|     [Connecticut](ct/)      |            |            |            |            |                              |
-|       [Delaware](de/)       |            |            |            |            |                              |
-| [District of Columbia](dc/) | 2016--2017 |            |            |            |                              |
-|       [Florida](fl/)        |            |            |            |            |                              |
-|       [Georgia](ga/)        |            |            |            |            |                              |
-|        [Hawaii](hi/)        |            |            |            |            |                              |
-|        [Idaho](id/)         |            |            |            |            |                              |
-|       [Illinois](il/)       |            |            |            | 2009--2012 |                              |
-|       [Indiana](in/)        |            |            |            |            |                              |
-|         [Iowa](ia/)         |            |            |            |            |                              |
-|        [Kansas](ks/)        |            |            |            |            |                              |
-|       [Kentucky](ky/)       |            |            |            |            |                              |
-|        [Maine](me/)         |            |            |            |            |                              |
-|      [Louisiana](la/)       |            |            |            |            |                              |
-|        [Maine](me/)         |            |            |            |            |                              |
-|       [Maryland](md/)       |            |            |            |            |                              |
-|    [Massachusetts](ma/)     |            |            |            |            |                              |
-|       [Michigan](mi/)       |            |            |            |            |                              |
-|      [Minnesota](mn/)       |            |            |            |            |                              |
-|     [Mississippi](ms/)      |            |            |            |            |                              |
-|       [Missouri](mo/)       |            |            |            |            |                              |
-|       [Montana](mt/)        |            |            |            |            |                              |
-|       [Nebraska](nb/)       |            |            |            |            |                              |
-|        [Nevada](nv/)        |            |            |            |            |                              |
-|    [New Hampshire](nh/)     |            |            |            |            |                              |
-|      [New Jersey](nj/)      |            |            |            |            |                              |
-|      [New Mexico](nm/)      |            |            |            |            |                              |
-|       [New York](ny/)       |            |            |            |            |                              |
-|    [North Carolina](nc/)    |            |            |            |            |                              |
-|     [North Dakota](nd/)     |            |            |            |            |                              |
-|         [Ohio](oh/)         |            |            |            |            |                              |
-|       [Oklahoma](ok/)       |            |            |            |            |                              |
-|        [Oregon](or/)        |            |            |            |            |                              |
-|     [Pennsylvania](pa/)     |    2017    |            |            |            |                              |
-|     [Rhode Island](ri/)     |            |            |            |            |                              |
-|    [South Carolina](sc/)    |            |            |            |            |                              |
-|     [South Dakota](sd/)     |            |            |            |            |                              |
-|      [Tennessee](tn/)       |            |            |            |            |                              |
-|        [Texas](tx/)         |            |            |            |            |                              |
-|         [Utah](ut/)         |            |            |            |            |                              |
-|       [Vermont](vt/)        |            |            |            |            |                              |
-|       [Virginia](va/)       |            |            |            |            |                              |
-|      [Washington](wa/)      |            |            |            |            |                              |
-|    [West Virginia](wv/)     |            |            |            |            |                              |
-|      [Wisconsin](wi/)       |            |            |            |            |                              |
-|       [Wyoming](wy/)        |            |            |            |            |                              |
+|            State            |      State       |            City            | County                     |            k12             |          Higher Ed.          |
+| :-------------------------: | :--------------: | :------------------------: | -------------------------- | :------------------------: | :--------------------------: |
+|       [Alabama](al/)        |       2010       |                            |                            |                            |                              |
+|        [Alaska](ak/)        |                  |                            |                            |                            |          2009--2016          |
+|       [Arizona](az/)        |                  |                            |                            |                            | UA 2011--2014<br /> ASU 2008 |
+|       [Arkansas](ar/)       |       2017       |                            |                            |                            |                              |
+|      [California](ca/)      |    2009--2016    |         2009--2016         | 2009--2016                 |         2009--2016         |          2009--2016          |
+|       [Colorado](co/)       |                  |                            |                            |                            |                              |
+|     [Connecticut](ct/)      |    2010--2017    |                            |                            |                            |          2010--2017          |
+|       [Delaware](de/)       |    2007--2013    |                            |                            |                            |                              |
+| [District of Columbia](dc/) |    2016--2017    |                            |                            |                            |                              |
+|       [Florida](fl/)        |    1995--2014    |         1997--2011         | 1997--2014                 |         1997--2014         |             2014             |
+|       [Georgia](ga/)        |    2010--2016    |                            |                            |                            |                              |
+|        [Hawaii](hi/)        |       2016       |                            |                            |                            |                              |
+|        [Idaho](id/)         | 2008, 2013, 2017 |                            |                            |                            |                              |
+|       [Illinois](il/)       |                  |                            |                            |         2009--2012         |                              |
+|       [Indiana](in/)        |                  |                            |                            |                            |                              |
+|         [Iowa](ia/)         |    2006--2016    |                            |                            |                            |                              |
+|        [Kansas](ks/)        |    2009--2016    |         2009--2016         | 2010--2016                 |         2008--2017         |                              |
+|       [Kentucky](ky/)       |                  |                            |                            |                            |                              |
+|        [Maine](me/)         |       2008       |                            |                            |                            |                              |
+|      [Louisiana](la/)       |    2009--2013    |         2009--2012         |                            |                            |          2009--2013          |
+|        [Maine](me/)         |       2008       |                            |                            |                            |                              |
+|       [Maryland](md/)       |    2012--2017    |                            |                            |                            |                              |
+|    [Massachusetts](ma/)     |    2010--2017    |                            |                            |                            |                              |
+|       [Michigan](mi/)       |                  |                            |                            |                            |                              |
+|      [Minnesota](mn/)       |    2011--2016    |                            |                            |                            |                              |
+|     [Mississippi](ms/)      |                  |                            |                            |                            |                              |
+|       [Missouri](mo/)       |    2007--2017    |                            |                            |                            |                              |
+|       [Montana](mt/)        |       2017       |         2011--2017         |                            |                            |                              |
+|       [Nebraska](nb/)       |                  |                            |                            |                            |                              |
+|        [Nevada](nv/)        |    2007--2016    | 2007--2016 with some holes | 2007--2016 with some holes | 2010--2016 with some holes |          2009--2016          |
+|    [New Hampshire](nh/)     |    2012--2016    |                            |                            |                            |                              |
+|      [New Jersey](nj/)      |    2010--2017    |                            |                            |                            |                              |
+|      [New Mexico](nm/)      |    2013--2018    |                            |                            |                            |                              |
+|       [New York](ny/)       |                  |                            |                            |                            |                              |
+|    [North Carolina](nc/)    |       2017       |                            |                            |                            |             2017             |
+|     [North Dakota](nd/)     |                  |                            |                            |                            |                              |
+|         [Ohio](oh/)         |    2010--2016    |                            |                            |         2006--2016         |                              |
+|       [Oklahoma](ok/)       |    2010--2016    |                            |                            |                            |          2010--2016          |
+|        [Oregon](or/)        |    2016--2017    |                            |                            |                            |                              |
+|     [Pennsylvania](pa/)     |       2017       |                            |                            |                            |                              |
+|     [Rhode Island](ri/)     |    2011--2017    |                            |                            |                            |                              |
+|    [South Carolina](sc/)    |       2017       |                            |                            |                            |                              |
+|     [South Dakota](sd/)     |                  |                            |                            |                            |                              |
+|      [Tennessee](tn/)       |                  |                            |                            |                            |                              |
+|        [Texas](tx/)         |                  |                            |                            |                            |                              |
+|         [Utah](ut/)         |    2009--2018    |                            |                            |                            |                              |
+|       [Vermont](vt/)        |       2017       |                            |                            |                            |                              |
+|       [Virginia](va/)       |    2016--2017    |                            |                            |                            |          2016--2017          |
+|      [Washington](wa/)      |    2012--2016    |                            |                            |         2011--2015         |                              |
+|    [West Virginia](wv/)     |       2006       |                            |                            |            2015            |                              |
+|      [Wisconsin](wi/)       |    2012--2014    |                            |                            |                            |                              |
+|       [Wyoming](wy/)        |                  |                            |                            |                            |                              |
 
 Besides this: 
 
