@@ -23,7 +23,7 @@ all_files <- list.files(path = data_dir, pattern = "*.pdf", full.names = TRUE)
 # Iterate over the list of PDF files. For each one, read it in, extract the 
 # data, make some basic transformations, and return it as a tidy data frame. 
 # Output of the loop below is a list of data frames (one per PDF file).
-all_dfs2 <- lapply(all_files, function(curr_file) {
+all_dfs <- lapply(all_files, function(curr_file) {
   # Read in the pdf document.
   txt <- pdftools::pdf_text(curr_file)
   
