@@ -20,7 +20,7 @@ In all, our aim is to investigate the extent to which compensation for different
 |        [Alaska](ak/)        |                  |                            |                            |                            |          2009--2016          |
 |       [Arizona](az/)        |                  |                            |                            |                            | UA 2011--2014<br /> ASU 2008 |
 |       [Arkansas](ar/)       |       2017       |                            |                            |                            |                              |
-|      [California](ca/)      |    2009--2016    |         2009--2016         | 2009--2016                 |         2009--2016         |          2009--2016          |
+|      [California](https://github.com/public-salaries/ca_salaries)      |    2009--2016    |         2009--2016         | 2009--2016                 |         2009--2016         |          2009--2016          |
 |       [Colorado](co/)       |                  |                            |                            |                            |                              |
 |     [Connecticut](ct/)      |    2010--2017    |                            |                            |                            |          2010--2017          |
 |       [Delaware](de/)       |    2007--2013    |                            |                            |                            |                              |
@@ -30,7 +30,7 @@ In all, our aim is to investigate the extent to which compensation for different
 |        [Hawaii](hi/)        |       2016       |                            |                            |                            |                              |
 |        [Idaho](id/)         | 2008, 2013, 2017 |                            |                            |                            |                              |
 |       [Illinois](il/)       |                  |                            |                            |         2009--2012         |                              |
-|       [Indiana](in/)        |                  |                            |                            |                            |                              |
+|       [Indiana](https://github.com/public-salaries/in_salaries)        |                  |                            |                            |                            |                              |
 |         [Iowa](ia/)         |    2006--2016    |                            |                            |                            |                              |
 |        [Kansas](ks/)        |    2009--2016    |         2009--2016         | 2010--2016                 |         2008--2017         |                              |
 |       [Kentucky](ky/)       |                  |                            |                            |                            |                              |

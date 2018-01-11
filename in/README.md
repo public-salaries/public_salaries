@@ -1,4 +1,4 @@
 ## Indiana Public Employee Salaries Data
 
-URL = https://gateway.ifionline.org/report_builder/
+See [https://github.com/public-salaries/in_salaries](https://github.com/public-salaries/in_salaries)
 
