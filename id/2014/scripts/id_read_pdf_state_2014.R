@@ -5,15 +5,15 @@ library(magrittr)
 
 cwd <- getwd()
 
-## Read in ID pdf data.
-## Source of the pdf docs is https://pibuzz.com/wp-content/uploads/post%20documents/Idaho%202013.pdf
+## Read in ID 2014 pdf data.
+## Source of the pdf docs is http://mediad.publicbroadcasting.net/p/kisu/files/workforce.pdf
 
 # Define data directory file path, and path to the PDF file..
-data_dir <- file.path(cwd, "id", "2013")
-pdf_file <- file.path(data_dir, "state.pdf")
+data_dir <- file.path(cwd, "id", "2014")
+pdf_file <- file.path(data_dir, "state_2014.pdf")
 
 # Read in functions that will be used throughout this script.
-source(file.path(data_dir, "scripts", "id_functions.R"))
+source(file.path(cwd, "id", "id_functions.R"))
 
 # Read in the pdf doc.
 txt <- pdftools::pdf_text(pdf_file)
@@ -118,6 +118,6 @@ obs_df$middle_initial <- vapply(full_names, function(x) x[[2]], character(1))
 # Write obs_df to file.
 write.csv(
   obs_df, 
-  file.path(data_dir, "state.csv"), 
+  file.path(data_dir, "state_2014.csv"), 
   row.names = FALSE
 )
