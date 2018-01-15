@@ -39,7 +39,7 @@ for (i in 2:12192) {
 }
 
 # Fix the header row
-names(res_tab)[5] <- "2016 Wage"
+names(res_tab)[6] <- "2016 Wage"
 
 write.csv(res_tab, file = "mi/mi_educ_salaries.csv", row.names = F)
 
