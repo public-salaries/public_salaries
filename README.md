@@ -28,7 +28,7 @@ In all, our aim is to investigate the extent to which compensation for different
 |              [Florida](fl/)              |    1995--2014    |         1997--2011         | 1997--2014                 |         1997--2014         |             2014             |
 |              [Georgia](ga/)              |    2010--2016    |                            |                            |                            |                              |
 |              [Hawaii](hi/)               |       2016       |                            |                            |                            |                              |
-|               [Idaho](id/)               | 2008, 2013, 2017 |                            |                            |                            |                              |
+|               [Idaho](id/)               | 2008, 2013--2014, 2017--2018 |                            |                            |                            |                              |
 |             [Illinois](il/)              |                  |                            |                            |         2009--2012         |                              |
 | [Indiana](https://github.com/public-salaries/in_salaries) |                  |                            |                            |                            |                              |
 |               [Iowa](ia/)                |    2006--2016    |                            |                            |                            |                              |
