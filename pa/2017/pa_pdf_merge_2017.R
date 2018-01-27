@@ -18,7 +18,7 @@ curr_year <- 2017
 
 # Define data directory file path, and get list of all PDF files.
 data_dir <- file.path(cwd, "pa", "2017")
-all_files <- list.files(path = data_dir, pattern = "*.pdf", full.names = TRUE)
+all_files <- list.files(path = data_dir, pattern = "*.pdf$", full.names = TRUE)
 
 # Iterate over the list of PDF files. For each one, read it in, extract the 
 # data, make some basic transformations, and return it as a tidy data frame. 
@@ -46,7 +46,40 @@ all_dfs <- lapply(all_files, function(curr_file) {
     page <- page %>% 
       strsplit("\r\n") %>% 
       unlist %>% 
-      .[!grepl("^\\s{8,}", .)]
+      .[!grepl("Employee Salary Report|11/15/2016|Last Name|\\s+\\d+/\\d+", .)]
+    
+    # Stitch together position strings that have been pulled apart.
+    idx <- grep("^\\s{10,}.+", page)
+    if (length(idx) > 1) {
+      taken <- vector()
+      rows_need_pos <- vector()
+      stitched_pos <- vector()
+      for (i in seq_len(length(idx))) {
+        idx_curr <- idx[i]
+        if (idx_curr %in% taken || idx_curr == idx[length(idx)]) {
+          next
+        }
+        idx_curr_2 <- idx[i + 1]
+        if (idx_curr == (idx_curr_2 - 2)) {
+          stitched_pos <- c(stitched_pos, 
+                            paste(gsub("^\\s{2,}", "", page[idx_curr]), 
+                                  gsub("^\\s{2,}", "", page[idx_curr_2])))
+          taken <- c(taken, idx_curr, idx_curr_2)
+          rows_need_pos <- c(rows_need_pos, idx_curr + 1)
+        }
+      }
+      # Fill in the stitched positions into the observations that are missing 
+      # positions.
+      for (i in seq_len(length(rows_need_pos))) {
+        row_curr <- rows_need_pos[i]
+        k <- page[row_curr] %>% 
+          strsplit("\\s+") %>% 
+          unlist(FALSE, FALSE)
+        page[row_curr] <- paste(k[1], k[2], stitched_pos[i], k[3], sep = "   ")
+      }
+      # Eliminate the rows from obj "taken".
+      page <- page[-taken]
+    }
     
     # Initialize output df.
     df <- data.frame(stringsAsFactors = FALSE)
@@ -75,7 +108,7 @@ all_dfs <- lapply(all_files, function(curr_file) {
       
       # Attempt to extract the salary value, and convert to numeric.
       pay <- suppressWarnings(
-        as.numeric(gsub("\\$|\\$0|,| |/|[A-Za-z]", "", obs[4]))
+        as.numeric(gsub("\\$|\\$0|,| |/|[A-z]", "", obs[4]))
       )
       
       # If length of obs is three, this means one of the fields is 
@@ -83,7 +116,7 @@ all_dfs <- lapply(all_files, function(curr_file) {
       # field is actually missing.
       if (length(obs) == 3) {
         pay <- suppressWarnings(
-          as.numeric(gsub("\\$|\\$0|,| |/|[A-Za-z]", "", obs[3]))
+          as.numeric(gsub("\\$|\\$0|,| |/|[A-z]", "", obs[3]))
         )
         if (!is.na(pay)) {
           obs_new <- c(rep(NA, 3), pay)
@@ -115,7 +148,7 @@ all_dfs <- lapply(all_files, function(curr_file) {
       if (is.na(pay)) {
         pay <- vapply(obs, function(x) {
           out <- suppressWarnings(
-            as.numeric(gsub("\\$|\\$0|,| |/|[A-Za-z]", "", x))
+            as.numeric(gsub("\\$|\\$0|,| |/|[A-z]", "", x))
           )
           if (is.na(out)) {
             out <- NA_real_
