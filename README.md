@@ -55,7 +55,7 @@ In all, our aim is to investigate the extent to which compensation for different
 |               [Ohio](oh/)                |    2010--2016    |                            |                            |         2006--2016         |                              |
 |             [Oklahoma](ok/)              |    2010--2016    |                            |                            |                            |          2010--2016          |
 |              [Oregon](or/)               |    2016--2017    |                            |                            |                            |                              |
-|           [Pennsylvania](pa/)            |       2017       |                            |                            |                            |                              |
+|           [Pennsylvania](pa/)            |    2015--2017    |                            |                            |                            |                              |
 |           [Rhode Island](ri/)            |    2011--2017    |                            |                            |                            |                              |
 |          [South Carolina](sc/)           |       2017       |                            |                            |                            |                              |
 |           [South Dakota](sd/)            |                  |                            |                            |                            |                              |
