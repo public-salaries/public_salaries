@@ -12,6 +12,10 @@ About 75%--80% of Richmond's budget goes toward personnel costs. This figure its
 
 In all, our aim is to investigate the extent to which compensation for different public employees is fair and rational.
 
+### Analyses
+
+see the latest at: https://github.com/public-salaries/pub_sal_analyses
+
 ### Data 
 
 |                  State                   |      State       |            City            | County                     |            k12             |          Higher Ed.          |
@@ -20,7 +24,7 @@ In all, our aim is to investigate the extent to which compensation for different
 |              [Alaska](ak/)               |                  |                            |                            |                            |          2009--2016          |
 |              [Arizona](az/)              |                  |                            |                            |                            | UA 2011--2014<br /> ASU 2008 |
 |             [Arkansas](ar/)              |       2017       |                            |                            |                            |                              |
-| [California](https://github.com/public-salaries/ca_salaries) |    2009--2016    |         2009--2016         | 2009--2016                 |         2009--2016         |          2009--2016          |
+| [California](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/KA3TS8) |    2009--2016    |         2009--2016         | 2009--2016                 |         2009--2016         |          2009--2016          |
 |             [Colorado](co/)              |                  |                            |                            |                            |                              |
 |            [Connecticut](ct/)            |    2010--2017    |                            |                            |                            |          2010--2017          |
 |             [Delaware](de/)              |    2007--2013    |                            |                            |                            |                              |
